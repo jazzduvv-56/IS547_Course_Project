@@ -1,30 +1,57 @@
-# IS 547 Course Project – Illinois Climate & Severe Weather Integration
+# IS 547 Course Project – Harmonizing Instrumental Climate Observations and Reported Severe Weather Events in Illinois (2010–2025)
 
-**Student:** Jasmitha Duvvuru (jd56) 
-**Semester:** Spring 2026  
+**Student:** Jasmitha Duvvuru (jd56)  
+**Semester:** Spring 2026
 
 ## Project Goal
-Harmonize daily instrumental weather measurements (GHCN-Daily) with officially reported severe weather events (Storm Events Database) for Illinois 2010–2025. The focus is on spatial and temporal mismatches between the two systems.
+This project harmonizes daily instrumental weather measurements from the NOAA Global Historical Climatology Network – Daily (GHCN-Daily) with county-level severe weather event records from the NOAA Storm Events Database for Illinois (2010–2025). The focus is on spatial and temporal harmonization between the two systems.
 
-## Datasets
-- **GHCN-Daily** – 10 selected Illinois stations  
-- **Storm Events** – Illinois records only, filtered to Winter Storm, Blizzard, Flood, Excessive Heat
+## Repository Structure
 
-## Repository Contents
-- `ghcn_illinois_clean_with_county.csv` – cleaned GHCN data with county and season  
-- `storm_events_illinois_clean.csv` – cleaned and daily-expanded Storm Events  
-- `final_integrated_illinois_climate_events.csv` – final merged dataset (main deliverable)  
-- `is547_course_project.py` – complete curation pipeline (GHCN + Storm Events + merge)  
-- `Progress_Report_jd56.pdf` – this report  
+```
+IS547_Course_Project/
+├── Raw Data/
+│   ├── Climate Dataset1.csv
+│   └── StormEvents_details/
+│       ├── StormEvents_2010.csv
+│       ├── StormEvents_2011.csv
+│       ├── StormEvents_2012.csv
+│       ├── StormEvents_2013.csv
+│       ├── StormEvents_2014.csv
+│       ├── StormEvents_2015.csv
+│       ├── StormEvents_2016.csv
+│       ├── StormEvents_2017.csv
+│       ├── StormEvents_2018.csv
+│       ├── StormEvents_2019.csv
+│       ├── StormEvents_2020.csv
+│       ├── StormEvents_2021.csv
+│       ├── StormEvents_2022.csv
+│       ├── StormEvents_2023.csv
+│       ├── StormEvents_2024.csv
+│       └── StormEvents_2025.csv
+├── Processed Data/                     ← Cleaned and final outputs folder
+├── Statistics/                         ← Visualizations and summary
+├── is547_course_project.ipynb          ← Main notebook (run this)
+├── data_dictionary.md
+├── README.md   
+└── (other documentation files)
+```
 
 ## How to Reproduce
-1. Place all raw `StormEvents_20XX.csv` files in a folder  
-2. Run `is547_course_project.py`  
-3. The final integrated file will be generated automatically  
+1. Clone or download this GitHub repository.
+2. Place the original raw files in the exact folder structure shown above (`Raw Data/` folder).
+3. The Jupyter Notebook and Raw Data folder should be in the same directory.
+3. Open `is547_course_project.ipynb` in Jupyter Notebook or JupyterLab.
+4. Run all cells in order.
 
-All code includes detailed comments explaining every curation decision.
+The notebook uses **only relative paths** and will automatically generate the final integrated dataset.
 
-## Next Steps (April)
-- Full data dictionary and comprehensive README  
-- Mismatch analysis and visualization  
-- Final report submission
+## Key Files
+- `data_dictionary.md` – Full explanation of every column in the final dataset
+- `final_integrated_illinois_climate_events.csv` – Main curated dataset
+- `is547_course_project.ipynb` – Complete, reproducible curation pipeline
+
+## Final Dataset
+The curated dataset is also available on Zenodo Sandbox:  
+**DOI:** 10.5072/zenodo.495348  
+**License:** Creative Commons Attribution 4.0 International (CC BY 4.0)
