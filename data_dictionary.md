@@ -27,4 +27,4 @@
 ```
 
 **Notes:**  
-Temperature values are in tenths of degrees Celsius as originally provided by NOAA. Precipitation, snowfall, and snow depth are in millimeters.
+Temperature values are in degrees Celsius (converted from Fahrenheit). Precipitation, snowfall, and snow depth are in millimeters (converted from inches).

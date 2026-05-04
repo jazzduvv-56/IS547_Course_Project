@@ -41,8 +41,8 @@ IS547_Course_Project/
 1. Clone or download this GitHub repository.
 2. Place the original raw files in the exact folder structure shown above (`Raw Data/` folder).
 3. The Jupyter Notebook and Raw Data folder should be in the same directory.
-3. Open `is547_course_project.ipynb` in Jupyter Notebook or JupyterLab.
-4. Run all cells in order.
+4. Open `is547_course_project.ipynb` in Jupyter Notebook or JupyterLab.
+5. Run all cells in order.
 
 The notebook uses **only relative paths** and will automatically generate the final integrated dataset.
 
